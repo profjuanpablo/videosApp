@@ -1,3 +1,4 @@
+import { IFilme } from './../models/IFilmes.models';
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
@@ -8,6 +9,38 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo = 'Videos App';
+  listaVideos: IFilme[] = [
+    {
+      nome: 'Minions 2: A Origem de Gru',
+      lancamento: '30/06/2022',
+      duracao: '1h 27m',
+      classificacao: 76,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tzFAboMUGJKoPQEtlxfxbbYsSWa.jpg',
+      generos:  ['Infantil', 'Família']
+
+    },
+    {
+      nome: 'thor: Amor e trovão',
+      lancamento: '08/07/2022',
+      duracao: '1h 59m',
+      classificacao: 76,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6OEBp0Gqv6DsOgi8diPUslT2kbA.jpg',
+      generos:  ['Ação', 'Aventura', 'Fantasia']
+
+    },
+    {
+      nome: 'Lightyear (2022)',
+      lancamento: '16/06/2022',
+      duracao: '1h 47',
+      classificacao: 72,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/js8FIFJ2xyK7pcUQ0pvuX3mJldC.jpg',
+      generos:  ['Animação', 'Ficção', 'científica', 'Aventura', 'Ação', 'Família']
+
+    }
+  ];
+
 
   constructor(
     public alertController: AlertController,
