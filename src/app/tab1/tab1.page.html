@@ -10,7 +10,8 @@
   <ion-searchbar placeholder="Buscar"></ion-searchbar>
     <ion-list>
       <ion-item-sliding *ngFor="let filme of listaVideos">
-        <ion-item lines="full">
+
+        <ion-item lines="full" [routerLink]="filme.pagina">
             <ion-thumbnail slot="start">
               <img [src]="filme.cartaz">
             </ion-thumbnail>
@@ -18,7 +19,7 @@
               <div>
                 <h1>{{ filme.nome }}</h1>
                 <p>{{ filme.lancamento}} - {{ filme.duracao }} </p>
-                <ion-badge color="danger" *ngFor="let genero of filme.generos">
+                <ion-badge color="primary" *ngFor="let genero of filme.generos">
                   {{ genero }}
                 </ion-badge>
                 <p>  </p>
